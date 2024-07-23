@@ -27,6 +27,18 @@ Carousel Component, will be at top
 
 sections .. have to see how I can manage to do  male vs female and also jiujitsu uniform vs muay thai or striking stuff
 
+Key component:
+  product card
+  Product list component
+  cart
+  footer component
+
+
+Router
+  Base router
+    /category/:categoryName
+    /product/:productId
+
 
 component of the actual cart.
   for cart be able to add items

@@ -1,13 +1,8 @@
 import { useEffect, useState } from "react";
 import "./Carousel.css";
-import carouselImg1 from "../assets/img/carousel01.png";
-import carouselImg2 from "../assets/img/carousel02.png";
 
 function Carousel() {
-  const data = [
-    { id: 1, imgsrc: carouselImg1 },
-    { id: 2, imgsrc: carouselImg2 },
-  ];
+  const data = ["1", "2", "3", "4"];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -29,17 +24,27 @@ function Carousel() {
   });
 
   return (
+    // <div className="carousel-container">
+    //   <div className="carousel-item">
+    //     <h1>Item 1</h1>
+    //   </div>
+    //   <div className="carousel-item">
+    //     <h1>Item 2</h1>
+    //   </div>
+    //   <div className="carousel-item">
+    //     <h1>Item 3</h1>
+    //   </div>
+    // </div>
     <div className="carousel-container">
       {data.map((item, index) => {
         return (
-          <img
+          <h1
             className="carousel-item"
             style={{ transform: `translate(-${currentIndex * 100}%)` }}
             key={index}
-            src={item.imgsrc}
           >
-            {/* {item} */}
-          </img>
+            {item}
+          </h1>
         );
       })}
     </div>

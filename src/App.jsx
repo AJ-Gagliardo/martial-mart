@@ -1,17 +1,26 @@
 import { useState } from "react";
 
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter,
+  createBrowserRouter,
+  Route,
+  RouterProvider,
+  Routes,
+} from "react-router-dom";
 import Homepage from "./pages/Homepage";
+
+const router = createBrowserRouter([{ path: "/", element: <Homepage /> }]);
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <RouterProvider router={router} />
     </>
   );
 }

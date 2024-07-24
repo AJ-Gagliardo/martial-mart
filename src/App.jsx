@@ -1,13 +1,7 @@
 import { useState } from "react";
 
 import "./App.css";
-import {
-  BrowserRouter,
-  createBrowserRouter,
-  Route,
-  RouterProvider,
-  Routes,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 
 const router = createBrowserRouter([{ path: "/", element: <Homepage /> }]);
@@ -15,11 +9,6 @@ const router = createBrowserRouter([{ path: "/", element: <Homepage /> }]);
 function App() {
   return (
     <>
-      {/* <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-        </Routes>
-      </BrowserRouter> */}
       <RouterProvider router={router} />
     </>
   );

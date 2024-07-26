@@ -2,7 +2,9 @@ import Card from "./Card";
 
 function ProductsContainer() {
   return (
-    <div className="w-2/2 grid grid-cols-3 col-auto gap-4`">
+    <div className="my-8 w-2/2 grid sm:grid-cols-4 col-auto gap-4  justify-items-end">
+      <Card />
+      <Card />
       <Card />
       <Card />
       <Card />

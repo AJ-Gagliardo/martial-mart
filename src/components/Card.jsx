@@ -2,8 +2,8 @@ import blank from "../assets/img/Black_White_Border_Frame_Transparent_PNG_Image.
 
 function Card() {
   return (
-    <div className="">
-      <img src={blank} className="w-8"></img>
+    <div className="flex justify-center ">
+      <img src={blank} className=""></img>
     </div>
   );
 }

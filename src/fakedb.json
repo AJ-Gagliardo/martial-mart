@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Jiu-Jitsu Gi - Classic",
     "price": 120.99,
-    "imageUrl": "/imgPlaceHolder.png",
+    "imageUrl": "imgPlaceholder.png",
     "description": "A classic Jiu-Jitsu Gi designed for durability and comfort.",
     "category": "Uniforms",
     "gender": "male",

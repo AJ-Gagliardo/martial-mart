@@ -1,0 +1,250 @@
+[
+  {
+    "id": 1,
+    "name": "Jiu-Jitsu Gi - Classic",
+    "price": 120.99,
+    "imageUrl": "/imgPlaceHolder.png",
+    "description": "A classic Jiu-Jitsu Gi designed for durability and comfort.",
+    "category": "Uniforms",
+    "gender": "male",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": 2,
+    "name": "Women's Jiu-Jitsu Gi - Lightweight",
+    "price": 130.5,
+    "imageUrl": "/images/womens-jiu-jitsu-gi.jpg",
+    "description": "Lightweight and tailored fit Jiu-Jitsu Gi for women.",
+    "category": "Uniforms",
+    "gender": "female",
+    "sizes": ["XS", "S", "M", "L"]
+  },
+  {
+    "id": 3,
+    "name": "Muay Thai Gloves",
+    "price": 60.0,
+    "imageUrl": "/images/muay-thai-gloves.jpg",
+    "description": "Premium gloves for Muay Thai training and sparring.",
+    "category": "Gloves",
+    "gender": "unisex",
+    "colors": ["Red", "Black", "Blue"]
+  },
+  {
+    "id": 4,
+    "name": "Boxing Hand Wraps",
+    "price": 15.99,
+    "imageUrl": "/images/boxing-hand-wraps.jpg",
+    "description": "Elastic cotton hand wraps for extra wrist support.",
+    "category": "Accessories",
+    "gender": "unisex",
+    "lengths": ["120", "180", "200"]
+  },
+  {
+    "id": 5,
+    "name": "Men's Rash Guard - Short Sleeve",
+    "price": 45.0,
+    "imageUrl": "/images/mens-rash-guard.jpg",
+    "description": "Moisture-wicking rash guard designed for intense training.",
+    "category": "Clothing",
+    "gender": "male",
+    "sizes": ["M", "L", "XL"]
+  },
+  {
+    "id": 6,
+    "name": "Women's Rash Guard - Long Sleeve",
+    "price": 50.0,
+    "imageUrl": "/images/womens-rash-guard.jpg",
+    "description": "Flexible long-sleeve rash guard with ergonomic design.",
+    "category": "Clothing",
+    "gender": "female",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "id": 7,
+    "name": "Jiu-Jitsu Belt",
+    "price": 20.0,
+    "imageUrl": "/images/jiu-jitsu-belt.jpg",
+    "description": "Durable cotton Jiu-Jitsu belt available in various colors.",
+    "category": "Accessories",
+    "gender": "unisex",
+    "colors": ["White", "Blue", "Purple", "Brown", "Black"]
+  },
+  {
+    "id": 8,
+    "name": "Kick Pads",
+    "price": 70.0,
+    "imageUrl": "/images/kick-pads.jpg",
+    "description": "Reinforced kick pads for Muay Thai and kickboxing practice.",
+    "category": "Equipment",
+    "gender": "unisex"
+  },
+  {
+    "id": 9,
+    "name": "Women's Training Shorts",
+    "price": 35.0,
+    "imageUrl": "/images/womens-training-shorts.jpg",
+    "description": "Lightweight and durable shorts designed for martial arts training.",
+    "category": "Clothing",
+    "gender": "female",
+    "sizes": ["XS", "S", "M", "L"]
+  },
+  {
+    "id": 10,
+    "name": "Men's Training Shorts",
+    "price": 40.0,
+    "imageUrl": "/images/mens-training-shorts.jpg",
+    "description": "Comfortable training shorts for martial arts and fitness.",
+    "category": "Clothing",
+    "gender": "male",
+    "sizes": ["M", "L", "XL", "XXL"]
+  },
+  {
+    "id": 11,
+    "name": "Protective Headgear",
+    "price": 55.0,
+    "imageUrl": "/images/protective-headgear.jpg",
+    "description": "Adjustable headgear for safe sparring sessions.",
+    "category": "Equipment",
+    "gender": "unisex",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "id": 12,
+    "name": "Muay Thai Shin Guards",
+    "price": 65.0,
+    "imageUrl": "/images/muay-thai-shin-guards.jpg",
+    "description": "High-quality shin guards for Muay Thai training.",
+    "category": "Equipment",
+    "gender": "unisex",
+    "sizes": ["S", "M", "L"]
+  },
+  {
+    "id": 13,
+    "name": "Children's Karate Gi",
+    "price": 50.0,
+    "imageUrl": "/images/childrens-karate-gi.jpg",
+    "description": "Lightweight and durable Karate Gi for kids.",
+    "category": "Uniforms",
+    "gender": "unisex",
+    "sizes": ["XS", "S", "M"]
+  },
+  {
+    "id": 14,
+    "name": "Yoga Mat for Martial Arts",
+    "price": 30.0,
+    "imageUrl": "/images/yoga-mat.jpg",
+    "description": "Thick, non-slip mat for stretching and conditioning exercises.",
+    "category": "Accessories",
+    "gender": "unisex",
+    "colors": ["Gray", "Green", "Purple"]
+  },
+  {
+    "id": 15,
+    "name": "Women's Sparring Gloves",
+    "price": 55.0,
+    "imageUrl": "/images/womens-sparring-gloves.jpg",
+    "description": "Lightweight gloves for sparring sessions, tailored for women.",
+    "category": "Gloves",
+    "gender": "female",
+    "sizes": ["S", "M"]
+  },
+  {
+    "id": 16,
+    "name": "Jiu-Jitsu Training Dummy",
+    "price": 150.0,
+    "imageUrl": "/images/jiu-jitsu-training-dummy.jpg",
+    "description": "Durable grappling dummy for practicing Jiu-Jitsu techniques.",
+    "category": "Equipment",
+    "gender": "unisex",
+    "sizes": ["Adult", "Kids"]
+  },
+  {
+    "id": 17,
+    "name": "Women's Muay Thai Shorts",
+    "price": 45.0,
+    "imageUrl": "/images/womens-muay-thai-shorts.jpg",
+    "description": "Stylish and lightweight shorts designed for Muay Thai.",
+    "category": "Clothing",
+    "gender": "female",
+    "sizes": ["XS", "S", "M", "L"]
+  },
+  {
+    "id": 18,
+    "name": "Men's Compression Pants",
+    "price": 50.0,
+    "imageUrl": "/images/mens-compression-pants.jpg",
+    "description": "High-performance compression pants for martial arts training.",
+    "category": "Clothing",
+    "gender": "male",
+    "sizes": ["M", "L", "XL"]
+  },
+  {
+    "id": 19,
+    "name": "Kids' Karate Belt Set",
+    "price": 25.0,
+    "imageUrl": "/images/kids-karate-belt-set.jpg",
+    "description": "Set of Karate belts for kids, available in all belt levels.",
+    "category": "Accessories",
+    "gender": "unisex",
+    "colors": ["White", "Yellow", "Green", "Blue", "Brown", "Black"]
+  },
+  {
+    "id": 20,
+    "name": "Boxing Speed Bag",
+    "price": 75.0,
+    "imageUrl": "/images/boxing-speed-bag.jpg",
+    "description": "Leather speed bag for improving hand-eye coordination.",
+    "category": "Equipment",
+    "gender": "unisex"
+  },
+  {
+    "id": 21,
+    "name": "Protective Mouth Guard",
+    "price": 12.99,
+    "imageUrl": "/images/mouth-guard.jpg",
+    "description": "Shock-absorbing mouth guard for sparring sessions.",
+    "category": "Accessories",
+    "gender": "unisex",
+    "sizes": ["Youth", "Adult"]
+  },
+  {
+    "id": 22,
+    "name": "Women's Taekwondo Uniform",
+    "price": 70.0,
+    "imageUrl": "/images/womens-taekwondo-uniform.jpg",
+    "description": "Traditional Taekwondo uniform with a tailored fit for women.",
+    "category": "Uniforms",
+    "gender": "female",
+    "sizes": ["XS", "S", "M", "L"]
+  },
+  {
+    "id": 23,
+    "name": "Men's Taekwondo Uniform",
+    "price": 70.0,
+    "imageUrl": "/images/mens-taekwondo-uniform.jpg",
+    "description": "Durable Taekwondo uniform designed for comfort and performance.",
+    "category": "Uniforms",
+    "gender": "male",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": 24,
+    "name": "Adjustable Jump Rope",
+    "price": 15.0,
+    "imageUrl": "/images/jump-rope.jpg",
+    "description": "Adjustable-length jump rope for conditioning and agility training.",
+    "category": "Accessories",
+    "gender": "unisex",
+    "colors": ["Black", "Blue", "Red"]
+  },
+  {
+    "id": 25,
+    "name": "Women's Compression Sports Bra",
+    "price": 30.0,
+    "imageUrl": "/images/womens-compression-sports-bra.jpg",
+    "description": "Supportive and comfortable sports bra for martial arts training.",
+    "category": "Clothing",
+    "gender": "female",
+    "sizes": ["XS", "S", "M", "L"]
+  }
+]

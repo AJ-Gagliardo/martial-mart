@@ -5,7 +5,7 @@ function ProductsContainer() {
   // console.log(fakedb[0].name);
 
   return (
-    <div className="my-8 w-2/2 grid sm:grid-cols-4 col-auto gap-6   ">
+    <div className="my-8 mx-auto w-2/2 grid sm:grid-cols-4 col-auto gap-6    ">
       {fakedb.map((product) => (
         <Card
           key={product.id}

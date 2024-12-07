@@ -29,11 +29,11 @@ function Carousel() {
   });
 
   return (
-    <div className="carousel-container">
+    <div className="carousel-container w-12/12 sm:w-12/12 mx-auto flex">
       {data.map((item, index) => {
         return (
           <img
-            className="carousel-item"
+            className="carousel-items"
             style={{ transform: `translate(-${currentIndex * 100}%)` }}
             key={index}
             src={item.imgsrc}

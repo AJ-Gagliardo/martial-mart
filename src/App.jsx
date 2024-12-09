@@ -2,12 +2,16 @@ import "./App.css";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import AppLayout from "./ui/AppLayout";
+import ProductsContainer from "./components/ProductsContainer";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
-    children: [{ path: "/", element: <Homepage /> }],
+    children: [
+      { path: "/", element: <Homepage /> },
+      { path: "/allProducts", element: <ProductsContainer /> },
+    ],
   },
 ]);
 

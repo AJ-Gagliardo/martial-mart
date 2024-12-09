@@ -3,7 +3,7 @@ import fakedb from "../fakedb.json";
 import SearchBar from "./SearchBar";
 import { useEffect, useState } from "react";
 
-function ProductsContainer() {
+function ProductsContainer({ cartItems, setCartItems }) {
   // console.log(fakedb[0].name);
 
   const [query, setQuery] = useState();
@@ -15,6 +15,11 @@ function ProductsContainer() {
   //   setFilteredProducts(fakedb);
   // }, []);
 
+  function addToCart(product) {
+    console.alert("product added");
+    setCartItems(...cartItems, 1);
+  }
+
   return (
     <>
       <SearchBar query={query} setQuery={setQuery} />
@@ -25,6 +30,7 @@ function ProductsContainer() {
             productName={product.name}
             imgsrc={product.imageUrl}
             price={product.price}
+            onAddtoCart={addToCart}
           />
         ))}
       </div>

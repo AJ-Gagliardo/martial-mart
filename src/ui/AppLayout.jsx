@@ -5,13 +5,13 @@ import Carousel from "../components/Carousel";
 import { useState } from "react";
 
 function AppLayout() {
-  const [cartItems, setCatItems] = useState();
+  const [cartItems, setCatItems] = useState([]);
   return (
-    <div>
+    <div className="bg-slate-200">
       <Header />
       <Nav cartItems={cartItems} setCartItems={setCatItems} />
       {/* <Carousel /> */}
-      <Outlet />
+      <Outlet cartItems={cartItems} setCartItems={setCatItems} />
     </div>
   );
 }

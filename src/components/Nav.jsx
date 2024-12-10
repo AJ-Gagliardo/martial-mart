@@ -3,7 +3,7 @@ import Cart from "./Cart";
 
 function Nav({ cartItems, setCartItems }) {
   return (
-    <div className="flex my-8 bg-slate-800 text-slate-200 p-2 rounded-md ">
+    <div className="flex mt-8 bg-slate-800 text-slate-200 p-2 rounded-sm ">
       <div className="flex flex-1">
         <Link
           to="/"

@@ -19,7 +19,23 @@ function ProductsContainer() {
 
   function addToCart(product) {
     // alert("product added");
-    setCartItems([...cartItems, "new product"]);
+    // setCartItems([...cartItems, { ...quantity }]);
+    const exists = cartItems.find((item) => product.id === item.id);
+
+    //it it exists it adds 1 to the quantity
+    if (exists) {
+      setCartItems(
+        cartItems.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
+      );
+    } else {
+      // if it doesnt exists this will add the item tot he cart
+      setCartItems([...cartItems, { ...product, quantity: 1 }]);
+    }
+    // setCartItems([...cartItems, "new product"]);
   }
 
   // useEffect(() => {

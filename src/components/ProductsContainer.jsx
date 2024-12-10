@@ -6,7 +6,7 @@ import { useOutletContext } from "react-router-dom";
 
 function ProductsContainer() {
   // console.log(fakedb[0].name);
-  const { cartItems, setCartItems } = useOutletContext;
+  const { cartItems, setCartItems } = useOutletContext();
 
   const [query, setQuery] = useState();
   const [discipline, setDiscipline] = useState();
@@ -18,9 +18,13 @@ function ProductsContainer() {
   // }, []);
 
   function addToCart(product) {
-    alert("product added");
-    setCartItems([...cartItems, 1]);
+    // alert("product added");
+    setCartItems([...cartItems, "new product"]);
   }
+
+  // useEffect(() => {
+  //   setCartItems([...cartItems, "new product"]);
+  // }, []);
 
   return (
     <>

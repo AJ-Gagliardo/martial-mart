@@ -11,7 +11,8 @@ function AppLayout() {
       <Header />
       <Nav cartItems={cartItems} setCartItems={setCatItems} />
       {/* <Carousel /> */}
-      <Outlet cartItems={cartItems} setCartItems={setCatItems} />
+      {/* testing with context prop, read online that I cant pass props on an outlet */}
+      <Outlet context={({ cartItems }, { setCatItems })} />
     </div>
   );
 }

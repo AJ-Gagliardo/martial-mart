@@ -26,7 +26,7 @@ function Nav({ cartItems, setCartItems }) {
       </div>
       <div className="flex flex-1">
         {/* <p className="ml-auto mr-2 sm:mr-20">Cart</p> */}
-        <Cart />
+        <Cart cartItems={cartItems} setCartItems={setCartItems} />
       </div>
     </div>
   );

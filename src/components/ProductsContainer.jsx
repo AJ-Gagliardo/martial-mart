@@ -2,9 +2,11 @@ import Card from "./Card";
 import fakedb from "../fakedb.json";
 import SearchBar from "./SearchBar";
 import { useEffect, useState } from "react";
+import { useOutletContext } from "react-router-dom";
 
-function ProductsContainer({ cartItems, setCartItems }) {
+function ProductsContainer() {
   // console.log(fakedb[0].name);
+  const { cartItems, setCartItems } = useOutletContext;
 
   const [query, setQuery] = useState();
   const [discipline, setDiscipline] = useState();
@@ -16,8 +18,8 @@ function ProductsContainer({ cartItems, setCartItems }) {
   // }, []);
 
   function addToCart(product) {
-    console.alert("product added");
-    setCartItems(...cartItems, 1);
+    alert("product added");
+    setCartItems([...cartItems, 1]);
   }
 
   return (
@@ -30,7 +32,7 @@ function ProductsContainer({ cartItems, setCartItems }) {
             productName={product.name}
             imgsrc={product.imageUrl}
             price={product.price}
-            onAddtoCart={addToCart}
+            onAddToCart={() => addToCart(product)}
           />
         ))}
       </div>

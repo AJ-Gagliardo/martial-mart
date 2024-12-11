@@ -3,7 +3,7 @@ import Cart from "./Cart";
 
 function Nav({ cartItems, setCartItems }) {
   return (
-    <div className="flex mt-8 bg-slate-800 text-slate-200 p-2 rounded-sm ">
+    <div className="bg-slate-800 text-slate-200 py-4 h-16 flex items-center justify-between max-w-screen-lg mx-auto">
       <div className="flex flex-1">
         <Link
           to="/"
@@ -24,9 +24,14 @@ function Nav({ cartItems, setCartItems }) {
           <p>By Discipline</p>
         </Link>
       </div>
-      <div className="flex flex-1">
-        {/* <p className="ml-auto mr-2 sm:mr-20">Cart</p> */}
-        <Cart cartItems={cartItems} setCartItems={setCartItems} />
+      <div>
+        <Link
+          to="/cart"
+          className="flex flex-1 text-slate-200 hover:text-slate-50 hover:scale-125"
+        >
+          {/* <p className="ml-auto mr-2 sm:mr-20">Cart</p> */}
+          <Cart cartItems={cartItems} setCartItems={setCartItems} />
+        </Link>
       </div>
     </div>
   );

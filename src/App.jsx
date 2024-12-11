@@ -3,6 +3,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import AppLayout from "./ui/AppLayout";
 import ProductsContainer from "./components/ProductsContainer";
+import CartItems from "./components/CartItems";
 
 const router = createBrowserRouter([
   {
@@ -11,15 +12,16 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Homepage /> },
       { path: "/allProducts", element: <ProductsContainer /> },
+      { path: "/cart", element: <CartItems /> },
     ],
   },
 ]);
 
 function App() {
   return (
-    <>
+    <div className="container mx-auto max-w-screen-lg">
       <RouterProvider router={router} />
-    </>
+    </div>
   );
 }
 

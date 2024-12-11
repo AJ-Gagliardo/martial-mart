@@ -28,8 +28,9 @@ function Carousel() {
     return () => clearInterval(interval);
   });
 
+  //w-12/12 sm:w-12/12 this was working, i am playing around with something else
   return (
-    <div className="carousel-container w-12/12 sm:w-12/12 mx-auto flex">
+    <div className="carousel-container w-2/2  sm:w-12/12 mx-auto flex">
       {data.map((item, index) => {
         return (
           <img

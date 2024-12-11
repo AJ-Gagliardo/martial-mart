@@ -45,7 +45,7 @@ function ProductsContainer() {
   return (
     <>
       <SearchBar query={query} setQuery={setQuery} />
-      <div className="my-8 mx-auto w-2/2 grid sm:grid-cols-4 col-auto gap-8    ">
+      <div className="my-8 mx-auto max-w-screen-2xl grid sm:grid-cols-4 col-auto gap-8    ">
         {fakedb.map((product) => (
           <Card
             key={product.id}

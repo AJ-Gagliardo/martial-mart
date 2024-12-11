@@ -32,7 +32,6 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-
   background-color: #e2e8f0;
 }
 
@@ -71,4 +70,10 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px; /* Matches Tailwind's max-w-screen-lg */
+  padding: 0 0rem; /* Optional: Add some padding */
 }

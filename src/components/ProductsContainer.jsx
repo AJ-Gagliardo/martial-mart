@@ -36,12 +36,9 @@ function ProductsContainer() {
       );
     } else {
       // if it doesnt exists this will add the item tot he cart
-      // setCartItems([...cartItems, { ...product, quantity: 1 }]);
       console.log(product);
-      setCartItems([...cartItems, { product, quantity: 1 }]);
+      setCartItems([...cartItems, { ...product, quantity: 1 }]);
     }
-
-    // setCartItems([...cartItems, "new product"]);
   }
 
   // useEffect(() => {
@@ -71,14 +68,15 @@ export default ProductsContainer;
 
 // this one is working, putting it on the side to test other things
 {
-  /* <div className="my-8 mx-auto w-2/2 grid sm:grid-cols-4 col-auto gap-8    ">
+  /* <div className="my-8 mx-auto max-w-screen-2xl grid sm:grid-cols-4 col-auto gap-8  text-slate-800  ">
         {fakedb.map((product) => (
           <Card
             key={product.id}
             productName={product.name}
             imgsrc={product.imageUrl}
             price={product.price}
-             onAddToCart={addToCart}
+            onAddToCart={addToCart}
+            product={product}
           />
         ))}
       </div> */

@@ -2,7 +2,7 @@ import CartItemIndividual from "./CartItemIndividual";
 
 function CartItems({ cartItems }) {
   return (
-    <div className="max-w-screen-2xl">
+    <div className="my-8 mx-auto max-w-screen-2xl    text-slate-800 ">
       <CartItemIndividual />
     </div>
   );

@@ -16,6 +16,9 @@ function ProductsContainer() {
   // useEffect(function () {
   //   setFilteredProducts(fakedb);
   // }, []);
+  function addCartTest() {
+    setCartItems(1);
+  }
 
   function addToCart(product) {
     // alert("product added");
@@ -33,8 +36,11 @@ function ProductsContainer() {
       );
     } else {
       // if it doesnt exists this will add the item tot he cart
-      setCartItems([...cartItems, { ...product, quantity: 1 }]);
+      // setCartItems([...cartItems, { ...product, quantity: 1 }]);
+      console.log(product);
+      setCartItems([...cartItems, { product, quantity: 1 }]);
     }
+
     // setCartItems([...cartItems, "new product"]);
   }
 
@@ -52,7 +58,8 @@ function ProductsContainer() {
             productName={product.name}
             imgsrc={product.imageUrl}
             price={product.price}
-            onAddToCart={() => addToCart(product)}
+            onAddToCart={addToCart}
+            product={product}
           />
         ))}
       </div>
@@ -71,6 +78,7 @@ export default ProductsContainer;
             productName={product.name}
             imgsrc={product.imageUrl}
             price={product.price}
+             onAddToCart={addToCart}
           />
         ))}
       </div> */

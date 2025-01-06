@@ -6,6 +6,7 @@ function Card({
   imgsrc = "blank",
   price = "9.99",
   onAddToCart,
+  product,
 }) {
   //justify-center had to take it out , have to check if this will make any negative change later on
   return (
@@ -15,7 +16,7 @@ function Card({
       </h2>
       <img src={imgsrc} className=" w-60 h-60"></img>
       <h3 className="">${price}</h3>
-      <button className="mb-2" onClick={onAddToCart}>
+      <button className="mb-2" onClick={() => onAddToCart(product)}>
         Add to Cart
       </button>
     </div>

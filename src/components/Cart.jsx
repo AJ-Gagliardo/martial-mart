@@ -1,5 +1,9 @@
 function Cart({ cartItems }) {
-  return <p className="ml-auto mr-2 sm:mr-20">Cart: {cartItems.length}</p>;
+  return (
+    <p className=" mr-2 sm:mr-2 mx-auto max-w-screen-2xl">
+      Cart: {cartItems.length}
+    </p>
+  );
 }
 
 export default Cart;

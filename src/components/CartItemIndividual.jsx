@@ -1,6 +1,6 @@
 function CartItemIndividual({ cartItems }) {
   return (
-    <div className="flex min-w-full gap-4">
+    <div className="grid sm:grid-cols-5 col-auto gap-8">
       <p>Product Image</p>
       <p>Product Name</p>
       <p>Price x </p>

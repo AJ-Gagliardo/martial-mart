@@ -11,15 +11,30 @@ function ProductsContainer() {
   const [query, setQuery] = useState();
   const [discipline, setDiscipline] = useState();
   const [gender, setGender] = useState();
+
+  const filteredProducts = fakedb.filter(checkQuery);
+  function checkQuery(product) {
+    //need to map and return the mapped thing
+    // const query = query;
+    // const db = fakedb;
+    // fakedb.map((item) => {
+    // if (product.productName === query) {
+    //   return product;
+    // } else {
+    //   console.log(query);
+    //   return;
+    // }
+    return product.name.toLowerCase().includes(query.toLowerCase());
+    // });
+  }
+  console.log(filteredProducts);
   // const [filteredProducts, setFilteredProducts] = useState({ fakedb });
 
   // useEffect(function () {
   //   setFilteredProducts(fakedb);
   // }, []);
-  function addCartTest() {
-    setCartItems(1);
-  }
 
+  // ## Adds products to the cart ##
   function addToCart(product) {
     // alert("product added");
     // setCartItems([...cartItems, { ...quantity }]);
@@ -49,7 +64,7 @@ function ProductsContainer() {
     <>
       <SearchBar query={query} setQuery={setQuery} />
       <div className="my-8 mx-auto max-w-screen-2xl grid sm:grid-cols-4 col-auto gap-8  text-slate-800  ">
-        {fakedb.map((product) => (
+        {filteredProducts.map((product) => (
           <Card
             key={product.id}
             productName={product.name}

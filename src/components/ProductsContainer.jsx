@@ -14,18 +14,7 @@ function ProductsContainer() {
 
   const filteredProducts = fakedb.filter(checkQuery);
   function checkQuery(product) {
-    //need to map and return the mapped thing
-    // const query = query;
-    // const db = fakedb;
-    // fakedb.map((item) => {
-    // if (product.productName === query) {
-    //   return product;
-    // } else {
-    //   console.log(query);
-    //   return;
-    // }
-    return product.name.toLowerCase().includes(query.toLowerCase());
-    // });
+    return product.name.toLowerCase().includes(query?.toLowerCase() || "");
   }
   console.log(filteredProducts);
   // const [filteredProducts, setFilteredProducts] = useState({ fakedb });

@@ -9,12 +9,27 @@ function ProductsContainer() {
   const { cartItems, setCartItems } = useOutletContext();
 
   const [query, setQuery] = useState();
-  const [discipline, setDiscipline] = useState();
+  const [category, setCategory] = useState();
   const [gender, setGender] = useState();
+  const [priceRange, setPriceRange] = useState({ min: 0, max: 200 });
 
   const filteredProducts = fakedb.filter(checkQuery);
   function checkQuery(product) {
-    return product.name.toLowerCase().includes(query?.toLowerCase() || "");
+    // by item name
+    const matchesQuery = product.name
+      .toLowerCase()
+      .includes(query?.toLowerCase() || "");
+    // by product category
+    const matchesCategory = !category || product.category === category;
+    // by gender
+    const matchesGender = !gender || product.gender === gender;
+    // by Price
+    const matchesPrice =
+      !priceRange ||
+      (product.price >= priceRange.min && product.price <= priceRange.max);
+
+    // matching all filters
+    return matchesQuery && matchesCategory && matchesGender && matchesPrice;
   }
   console.log(filteredProducts);
   // const [filteredProducts, setFilteredProducts] = useState({ fakedb });

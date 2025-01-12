@@ -3,6 +3,7 @@ import fakedb from "../fakedb.json";
 import SearchBar from "./SearchBar";
 import { useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
+import FilterUI from "./FilterUI";
 
 function ProductsContainer() {
   // console.log(fakedb[0].name);
@@ -67,6 +68,11 @@ function ProductsContainer() {
   return (
     <>
       <SearchBar query={query} setQuery={setQuery} />
+      <FilterUI
+        setCategory={setCategory}
+        setGender={setGender}
+        setPriceRange={setPriceRange}
+      />
       <div className="my-8 mx-auto max-w-screen-2xl grid sm:grid-cols-4 col-auto gap-8  text-slate-800  ">
         {filteredProducts.map((product) => (
           <Card

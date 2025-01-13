@@ -1,8 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function FilterUI({ setCategory, setGender, setPriceRange }) {
   const [isMaleChecked, setIsMaleChecked] = useState(true);
   const [isFemaleChecked, setIsFemaleChecked] = useState(true);
+
+  // function GenderFilter({setGender}) {
+
+  // }
+
+  // use Effect to change the selected gender component
+  useEffect(() => {
+    if (isMaleChecked === true && isFemaleChecked === true) {
+      console.log("both genders are selected");
+    } else if (isMaleChecked === true && isFemaleChecked === false) {
+      console.log("male only is selected");
+    } else if (isMaleChecked === false && isFemaleChecked === true) {
+      console.log("female only is selected");
+    } else {
+      console.log("make as if both are checked");
+    }
+    // it will react everytime one of this changes
+  }, [isMaleChecked, isFemaleChecked]);
 
   function PriceRange({ setPriceRange }) {
     const [minPrice, setMinPrice] = useState(0);
@@ -86,6 +104,7 @@ function FilterUI({ setCategory, setGender, setPriceRange }) {
             id="female"
             name="female"
             checked={isFemaleChecked}
+            onChange={() => setIsFemaleChecked(!isFemaleChecked)}
           />
         </div>
       </div>

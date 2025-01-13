@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 function FilterUI({ setCategory, setGender, setPriceRange }) {
   const [isMaleChecked, setIsMaleChecked] = useState(true);
   const [isFemaleChecked, setIsFemaleChecked] = useState(true);
-
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(250);
   // function GenderFilter({setGender}) {
 
   // }
@@ -22,10 +23,7 @@ function FilterUI({ setCategory, setGender, setPriceRange }) {
     // it will react everytime one of this changes
   }, [isMaleChecked, isFemaleChecked]);
 
-  function PriceRange({ setPriceRange }) {
-    const [minPrice, setMinPrice] = useState(0);
-    const [maxPrice, setMaxPrice] = useState(250);
-
+  function PriceRange({ setPriceRange, minPrice, maxPrice }) {
     const handleMinChange = (e) => {
       const value = Number(e.target.value);
       if (value <= maxPrice) {
@@ -108,7 +106,11 @@ function FilterUI({ setCategory, setGender, setPriceRange }) {
           />
         </div>
       </div>
-      <PriceRange />
+      <PriceRange
+        setPriceRange={setPriceRange}
+        minPrice={minPrice}
+        maxPrice={maxPrice}
+      />
     </div>
   );
 

@@ -2,14 +2,18 @@ import Card from "./Card";
 import fakedb from "../fakedb.json";
 import SearchBar from "./SearchBar";
 import { useEffect, useState } from "react";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, useSearchParams } from "react-router-dom";
 import FilterUI from "./FilterUI";
 
 function ProductsContainer() {
   // console.log(fakedb[0].name);
   const { cartItems, setCartItems } = useOutletContext();
 
-  const [query, setQuery] = useState();
+  //manage query params (in progress)
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // filters states
+  const [query, setQuery] = useState(searchParams.get("query") || "");
   const [category, setCategory] = useState();
   const [gender, setGender] = useState();
   const [priceRange, setPriceRange] = useState({ min: 0, max: 200 });
@@ -94,15 +98,15 @@ export default ProductsContainer;
 // this one is working, putting it on the side to test other things
 {
   /* <div className="my-8 mx-auto max-w-screen-2xl grid sm:grid-cols-4 col-auto gap-8  text-slate-800  ">
-        {fakedb.map((product) => (
-          <Card
-            key={product.id}
-            productName={product.name}
-            imgsrc={product.imageUrl}
-            price={product.price}
-            onAddToCart={addToCart}
-            product={product}
-          />
-        ))}
-      </div> */
+          {fakedb.map((product) => (
+            <Card
+              key={product.id}
+              productName={product.name}
+              imgsrc={product.imageUrl}
+              price={product.price}
+              onAddToCart={addToCart}
+              product={product}
+            />
+          ))}
+        </div> */
 }

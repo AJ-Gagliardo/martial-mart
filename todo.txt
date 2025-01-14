@@ -1,8 +1,14 @@
 
 
-cambiar discipline por categories.
+
 
 link para redes sociales
 about us
 
-maybe can add an image on the background
+maybe can add an image on the background or texture
+
+have to work also on the cart.
+
+I will check if i could put some of the search queries in params.
+
+

@@ -13,12 +13,16 @@ function FilterUI({ setCategory, setGender, setPriceRange }) {
   useEffect(() => {
     if (isMaleChecked === true && isFemaleChecked === true) {
       console.log("both genders are selected");
+      setGender("both");
     } else if (isMaleChecked === true && isFemaleChecked === false) {
       console.log("male only is selected");
+      setGender("male");
     } else if (isMaleChecked === false && isFemaleChecked === true) {
       console.log("female only is selected");
+      setGender("female");
     } else {
       console.log("make as if both are checked");
+      setGender("both");
     }
     // it will react everytime one of this changes
   }, [isMaleChecked, isFemaleChecked]);
@@ -81,7 +85,7 @@ function FilterUI({ setCategory, setGender, setPriceRange }) {
           <option value="">All Products</option>
           <option value="Uniforms">Uniforms</option>
           <option value="Gloves">Gloves</option>
-          <option value="Accesories">Accesories & others</option>
+          <option value="Accessories">Accesories & others</option>
         </select>
       </div>
       <div className="flex gap-4 text-center items-center content-center m-auto">

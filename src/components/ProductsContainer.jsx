@@ -18,6 +18,14 @@ function ProductsContainer() {
   const [gender, setGender] = useState();
   const [priceRange, setPriceRange] = useState({ min: 0, max: 200 });
 
+  useEffect(() => {
+    const params = {};
+    if (query) params.query = query;
+    if (category) params.category = category;
+
+    setSearchParams(params);
+  }, [query, category]);
+
   const filteredProducts = fakedb.filter(checkQuery);
   function checkQuery(product) {
     // by item name
@@ -27,14 +35,16 @@ function ProductsContainer() {
     // by product category
     const matchesCategory = !category || product.category === category;
     // by gender
+    // const matchesGender = !gender || product.gender === gender;
     const matchesGender = !gender || product.gender === gender;
     // by Price
     const matchesPrice =
       !priceRange ||
+      // && matchesGender
       (product.price >= priceRange.min && product.price <= priceRange.max);
 
     // matching all filters
-    return matchesQuery && matchesCategory && matchesGender && matchesPrice;
+    return matchesQuery && matchesCategory && matchesPrice;
   }
   console.log(filteredProducts);
   // const [filteredProducts, setFilteredProducts] = useState({ fakedb });

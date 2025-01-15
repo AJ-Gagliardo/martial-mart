@@ -22,9 +22,13 @@ function ProductsContainer() {
     const params = {};
     if (query) params.query = query;
     if (category) params.category = category;
+    if (priceRange) {
+      params.priceMin = priceRange.min;
+      params.priceMax = priceRange.max;
+    }
 
     setSearchParams(params);
-  }, [query, category]);
+  }, [query, category, priceRange]);
 
   const filteredProducts = fakedb.filter(checkQuery);
   function checkQuery(product) {
@@ -36,7 +40,12 @@ function ProductsContainer() {
     const matchesCategory = !category || product.category === category;
     // by gender
     // const matchesGender = !gender || product.gender === gender;
-    const matchesGender = !gender || product.gender === gender;
+    const matchesGender =
+      !gender || gender === "both"
+        ? true
+        : product.gender === "unisex"
+        ? true
+        : product.gender === gender;
     // by Price
     const matchesPrice =
       !priceRange ||
@@ -44,7 +53,7 @@ function ProductsContainer() {
       (product.price >= priceRange.min && product.price <= priceRange.max);
 
     // matching all filters
-    return matchesQuery && matchesCategory && matchesPrice;
+    return matchesQuery && matchesCategory && matchesPrice && matchesGender;
   }
   console.log(filteredProducts);
   // const [filteredProducts, setFilteredProducts] = useState({ fakedb });

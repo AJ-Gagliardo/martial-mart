@@ -10,7 +10,7 @@ function CartItemIndividual({
   // const { cartItems } = useContext(createContext);
   const { cartItems, setCartItems } = useOutletContext();
   return (
-    <div className="grid grid-cols-6 col-auto gap-2 sm:gap-8 place-items-center text-sm sm:text-lg ">
+    <div className="grid grid-cols-6 col-auto gap-2  sm:gap-8  text-sm sm:text-lg ">
       <img src={productImg} className="w-12" />
       <p>{productName}</p>
       <p>{productPrice}</p>

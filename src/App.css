@@ -4,6 +4,7 @@
   padding: 0rem;
   text-align: center;
   min-width: 100vw;
+  place-items: center;
 }
 
 .logo {

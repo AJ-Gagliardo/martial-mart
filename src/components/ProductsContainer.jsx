@@ -55,7 +55,7 @@ function ProductsContainer() {
     // matching all filters
     return matchesQuery && matchesCategory && matchesPrice && matchesGender;
   }
-  console.log(filteredProducts);
+  // console.log(filteredProducts);
   // const [filteredProducts, setFilteredProducts] = useState({ fakedb });
 
   // useEffect(function () {
@@ -96,7 +96,8 @@ function ProductsContainer() {
         setGender={setGender}
         setPriceRange={setPriceRange}
       />
-      <div className="my-8 mx-auto max-w-screen-2xl grid sm:grid-cols-4 col-auto gap-8  text-slate-800  ">
+      <div className="my-8 mx-auto max-w-screen-2xl grid sm:grid-cols-4 col-auto gap-8  text-slate-800  p-0 min-w-full p-0">
+        {/* <div className="my-8 mx-auto max-w-screen-2xl    text-slate-800 "> */}
         {filteredProducts.map((product) => (
           <Card
             key={product.id}

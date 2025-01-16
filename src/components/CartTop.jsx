@@ -3,16 +3,17 @@ import { createContext, useContext } from "react";
 function CartTop() {
   // const { cartItems } = useContext(createContext);
   return (
-    <div className="grid sm:grid-cols-5 col-auto gap-8">
+    <div className="grid grid-cols-6 col-auto gap-2 sm:gap-8 place-items-center text-sm sm:text-lg ">
       <p>Product Image</p>
       <p>Product Name</p>
-      <p>Price x </p>
-      <div className="flex">
+      <p>Price</p>
+      <p>Quantity</p>
+      {/* <div className="flex">
         <button className="">-</button>
-        <p>Quantity</p>
         <button>+</button>
-      </div>
+      </div> */}
       <p>Total Price</p>
+      <p>Delete</p>
     </div>
 
     // cartItems.map((item)=>(

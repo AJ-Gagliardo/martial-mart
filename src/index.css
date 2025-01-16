@@ -15,6 +15,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -33,6 +36,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: #e2e8f0;
+  padding: 0;
+  margin: 0;
+  padding-top: 12px;
 }
 
 h1 {
@@ -73,7 +79,7 @@ button:focus-visible {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 0 0;
   max-width: 1024px; /* Matches Tailwind's max-w-screen-lg */
-  padding: 0 0rem; /* Optional: Add some padding */
+  padding: 0 0rem;
 }

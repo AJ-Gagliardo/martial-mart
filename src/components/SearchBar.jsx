@@ -16,7 +16,7 @@ function SearchBar({ query, setQuery }) {
   }
   return (
     <div className="my-8 ">
-      <p>Search by Name</p>
+      <p className="text-slate-800">Search by Name</p>
       <input
         type="text"
         className="border border-slate-600 h-8  w-2/3 shadow-md p-1"

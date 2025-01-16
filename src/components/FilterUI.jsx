@@ -45,7 +45,7 @@ function FilterUI({ setCategory, setGender, setPriceRange }) {
     };
 
     return (
-      <div className="grid gap-1 text-start place-items-center">
+      <div className="grid gap-1 text-start place-items-center text-stale-700 ">
         <label>
           Min Price: ${minPrice}
           <input
@@ -90,7 +90,9 @@ function FilterUI({ setCategory, setGender, setPriceRange }) {
       </div>
       <div className="flex gap-4 text-center items-center content-center m-auto">
         <div className="flex gap-1 ">
-          <label htmlFor="male">Male</label>
+          <label htmlFor="male" className="text-slate-700">
+            Male
+          </label>
           <input
             type="checkbox"
             id="male"
@@ -100,7 +102,9 @@ function FilterUI({ setCategory, setGender, setPriceRange }) {
           />
         </div>
         <div className="flex gap-1">
-          <label htmlFor="female">Female</label>
+          <label htmlFor="female" className="text-slate-700">
+            Female
+          </label>
           <input
             type="checkbox"
             id="female"

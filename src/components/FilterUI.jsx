@@ -46,7 +46,7 @@ function FilterUI({ setCategory, setGender, setPriceRange }) {
 
     return (
       <div className="grid gap-1 text-start place-items-center text-stale-700 ">
-        <label>
+        <label className="text-slate-700">
           Min Price: ${minPrice}
           <input
             type="range"
@@ -57,7 +57,7 @@ function FilterUI({ setCategory, setGender, setPriceRange }) {
             onChange={handleMinChange}
           />
         </label>
-        <label>
+        <label className="text-slate-700">
           Max Price: ${maxPrice}
           <input
             type="range"

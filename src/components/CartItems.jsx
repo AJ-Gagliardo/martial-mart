@@ -14,7 +14,8 @@ function CartItems() {
       (acc, product) => acc + product.price * product.quantity,
       0
     );
-    setTotalCost(cost);
+    const costFixed = cost.toFixed(2);
+    setTotalCost(costFixed);
   }, [cartItems]);
 
   return (
@@ -25,6 +26,8 @@ function CartItems() {
         console.log(product.name);
         return (
           <CartItemIndividual
+            key={product.id}
+            productId={product.id}
             productImg={product.imageUrl}
             productName={product.name}
             productPrice={product.price}

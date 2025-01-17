@@ -19,10 +19,10 @@ function Nav({ cartItems, setCartItems }) {
           <p>All Products</p>
         </Link>
         <Link
-          to="#"
+          to="/aboutUs"
           className="mx-2 sm:mx-auto text-slate-200 hover:text-slate-50 hover:scale-125"
         >
-          <p>By Discipline</p>
+          <p>About Us</p>
         </Link>
       </div>
       <div>

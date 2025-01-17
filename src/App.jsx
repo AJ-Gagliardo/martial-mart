@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage";
 import AppLayout from "./ui/AppLayout";
 import ProductsContainer from "./components/ProductsContainer";
 import CartItems from "./components/CartItems";
+import AboutUs from "./components/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Homepage /> },
       { path: "/allProducts", element: <ProductsContainer /> },
       { path: "/cart", element: <CartItems /> },
+      { path: "/aboutUs", element: <AboutUs /> },
     ],
   },
 ]);

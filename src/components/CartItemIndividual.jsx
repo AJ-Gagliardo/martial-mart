@@ -20,13 +20,31 @@ function CartItemIndividual({
     console.log("+1");
   }
 
+  function decreaseQuantity(productId) {
+    if (productQuantity > 1) {
+      setCartItems(
+        cartItems.map((item) =>
+          item.id === productId
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+      );
+      console.log("-1");
+    }
+  }
+
+  function deleteProduct(productId) {}
+
   return (
     <div className="grid grid-cols-6 col-auto gap-2  sm:gap-8  text-sm sm:text-lg mt-4 place-items-center">
       <img src={productImg} className="w-12" />
       <p>{productName}</p>
       <p>{productPrice}</p>
       <div className="flex place-items-center sm:gap-4">
-        <button className="w-2 h-4 sm:h-6 flex justify-center items-center text-slate-500 bg-slate-150">
+        <button
+          className="w-2 h-4 sm:h-6 flex justify-center items-center text-slate-500 bg-slate-150"
+          onClick={() => decreaseQuantity(productId)}
+        >
           -
         </button>
         <p>{productQuantity}</p>

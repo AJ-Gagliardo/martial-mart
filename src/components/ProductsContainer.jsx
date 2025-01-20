@@ -14,8 +14,8 @@ function ProductsContainer() {
 
   // filters states
   const [query, setQuery] = useState(searchParams.get("query") || "");
-  const [category, setCategory] = useState();
-  const [gender, setGender] = useState();
+  const [category, setCategory] = useState(searchParams.get("category") || "");
+  const [gender, setGender] = useState(searchParams.get("gender") || "");
   const [priceRange, setPriceRange] = useState({ min: 0, max: 200 });
 
   useEffect(() => {

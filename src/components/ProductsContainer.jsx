@@ -37,7 +37,16 @@ function ProductsContainer() {
       .toLowerCase()
       .includes(query?.toLowerCase() || "");
     // by product category
-    const matchesCategory = !category || product.category === category;
+    const matchesCategory =
+      !category ||
+      // product.category === category;
+      // uniforms, gloves, accessories
+      (category === "Uniforms" &&
+        (product.category === "Uniforms" || product.category === "Clothing"))
+        ? true
+        : product.category === category;
+
+    //
     // by gender
     // const matchesGender = !gender || product.gender === gender;
     const matchesGender =

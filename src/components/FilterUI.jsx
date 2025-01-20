@@ -83,7 +83,7 @@ function FilterUI({ setCategory, setGender, setPriceRange }) {
       <div>
         <select onChange={(e) => setCategory(e.target.value)}>
           <option value="">All Products</option>
-          <option value="Uniforms">Uniforms</option>
+          <option value="Uniforms">Uniforms & Clothing</option>
           <option value="Gloves">Gloves</option>
           <option value="Accessories">Accesories & others</option>
         </select>

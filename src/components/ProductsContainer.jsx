@@ -22,13 +22,14 @@ function ProductsContainer() {
     const params = {};
     if (query) params.query = query;
     if (category) params.category = category;
+    if (gender) params.gender = gender;
     if (priceRange) {
       params.priceMin = priceRange.min;
       params.priceMax = priceRange.max;
     }
 
     setSearchParams(params);
-  }, [query, category, priceRange]);
+  }, [query, category, priceRange, gender]);
 
   const filteredProducts = fakedb.filter(checkQuery);
   function checkQuery(product) {

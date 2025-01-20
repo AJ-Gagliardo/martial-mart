@@ -13,11 +13,23 @@ function HomePageUI() {
         <CategoryCard
           categoryName="Uniforms and Clothing"
           imgsrc="uniforms-category.webp"
-          url="/allProducts?category=Uniforms&priceMin=0&priceMax=200"
+          url="/allProducts?category=Uniforms&gender=both&priceMin=0&priceMax=200"
         />
-        <CategoryCard categoryName="For Men" imgsrc="men-category.webp" />
-        <CategoryCard categoryName="For Women" imgsrc="women-category.webp" />
-        <CategoryCard categoryName="Gloves" imgsrc="gloves-category.webp" />
+        <CategoryCard
+          categoryName="For Men"
+          imgsrc="men-category.webp"
+          url="/allProducts?&gender=male&priceMin=0&priceMax=200"
+        />
+        <CategoryCard
+          categoryName="For Women"
+          imgsrc="women-category.webp"
+          url="/allProducts?gender=female&priceMin=0&priceMax=200"
+        />
+        <CategoryCard
+          categoryName="Gloves"
+          imgsrc="gloves-category.webp"
+          url="/allProducts?category=Gloves&gender=both&priceMin=0&priceMax=200"
+        />
       </div>
     </>
   );

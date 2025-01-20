@@ -1,8 +1,21 @@
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 function FilterUI({ setCategory, setGender, setPriceRange }) {
-  const [isMaleChecked, setIsMaleChecked] = useState(true);
-  const [isFemaleChecked, setIsFemaleChecked] = useState(true);
+  const [searchParams] = useSearchParams();
+  const maleUrl =
+    searchParams.get("gender") === "male" ||
+    searchParams.get("gender") === "both"
+      ? true
+      : false;
+
+  const femaleUrl =
+    searchParams.get("gender") === "female" ||
+    searchParams.get("gender") === "both"
+      ? true
+      : false;
+  const [isMaleChecked, setIsMaleChecked] = useState(maleUrl);
+  const [isFemaleChecked, setIsFemaleChecked] = useState(femaleUrl);
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(250);
   // function GenderFilter({setGender}) {

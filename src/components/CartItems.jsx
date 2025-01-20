@@ -15,6 +15,9 @@ function CartItems() {
       0
     );
     const costFixed = cost.toFixed(2);
+    if (costFixed === false) {
+      costFixed = 0;
+    }
     setTotalCost(costFixed);
   }, [cartItems]);
 

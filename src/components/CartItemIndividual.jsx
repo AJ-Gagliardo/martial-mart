@@ -46,7 +46,7 @@ function CartItemIndividual({
   }
 
   function deleteProduct(productId) {
-    setCartItems([cartItems.filter((a) => a.id !== productId)]);
+    setCartItems(cartItems.filter((item) => item.id !== productId));
     closeModal();
   }
   // );
@@ -82,7 +82,7 @@ function CartItemIndividual({
           <div className="flex gap-4 justify-center my-1">
             <button
               className="bg-slate-100 text-red-600"
-              onClick={() => deleteProduct()}
+              onClick={() => deleteProduct(productId)}
             >
               Yes
             </button>

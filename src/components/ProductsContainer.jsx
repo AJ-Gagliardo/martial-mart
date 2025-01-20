@@ -2,7 +2,7 @@ import Card from "./Card";
 import fakedb from "../fakedb.json";
 import SearchBar from "./SearchBar";
 import { useEffect, useState } from "react";
-import { useOutletContext, useSearchParams } from "react-router-dom";
+import { Link, useOutletContext, useSearchParams } from "react-router-dom";
 import FilterUI from "./FilterUI";
 
 function ProductsContainer() {
@@ -101,6 +101,7 @@ function ProductsContainer() {
   return (
     <>
       <SearchBar query={query} setQuery={setQuery} />
+
       <FilterUI
         setCategory={setCategory}
         setGender={setGender}

@@ -3,7 +3,10 @@ import Cart from "./Cart";
 
 function Nav({ cartItems, setCartItems }) {
   return (
-    <div className=" bg-slate-800 text-slate-200 py-4 h-16 flex items-center justify-between max-w-screen-lg mx-auto lg:w-[1200px]">
+    <div
+      id="nav"
+      className=" bg-slate-800 text-slate-200 py-4 h-16 flex items-center justify-between max-w-screen-lg mx-auto lg:w-[1200px]"
+    >
       {/* <div className="fixed top-0 left-0 w-full bg-slate-800 text-slate-200 py-4 h-16 flex items-center justify-between max-w-screen-lg mx-auto lg:w-[1200px] z-10"> */}
       <div className="flex flex-1">
         <Link

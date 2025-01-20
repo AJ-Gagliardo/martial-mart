@@ -1,5 +1,6 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 import { useOutletContext } from "react-router-dom";
+import Modal from "react-modal";
 
 function CartItemIndividual({
   productId,
@@ -9,7 +10,18 @@ function CartItemIndividual({
   productQuantity,
 }) {
   // const { cartItems } = useContext(createContext);
+  Modal.setAppElement("#nav");
+
   const { cartItems, setCartItems } = useOutletContext();
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  function openModal() {
+    setModalIsOpen(true);
+  }
+
+  function closeModal() {
+    setModalIsOpen(false);
+  }
 
   function addQuantity(productId) {
     setCartItems(
@@ -33,10 +45,56 @@ function CartItemIndividual({
     }
   }
 
-  function deleteProduct(productId) {}
+  function deleteProduct(productId) {
+    setCartItems([cartItems.filter((a) => a.id !== productId)]);
+    closeModal();
+  }
+  // );
+  // }
 
   return (
     <div className="grid grid-cols-6 col-auto gap-2  sm:gap-8  text-sm sm:text-lg mt-4 place-items-center">
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Example Modal"
+        style={{
+          content: {
+            top: "50%",
+            left: "50%",
+            right: "auto",
+            bottom: "auto",
+            marginRight: "-50%",
+            transform: "translate(-50%, -50%)",
+            width: "300px",
+            height: "150px",
+            textAlign: "center",
+            borderRadius: "10px",
+            padding: "20px",
+          },
+        }}
+      >
+        <div>
+          <p>
+            Are you sure you want to{" "}
+            <span className="text-red-700">DELETE </span> this item?
+          </p>
+          <div className="flex gap-4 justify-center my-1">
+            <button
+              className="bg-slate-100 text-red-600"
+              onClick={() => deleteProduct()}
+            >
+              Yes
+            </button>
+            <button
+              className="bg-slate-600 text-slate-100"
+              onClick={() => closeModal()}
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </Modal>
       <img src={productImg} className="w-12" />
       <p>{productName}</p>
       <p>{productPrice}</p>
@@ -56,17 +114,13 @@ function CartItemIndividual({
         </button>
       </div>
       <p>{(productPrice * productQuantity).toFixed(2)}</p>
-      <button className="text-red-600 w-2 h-6 sm:h-8 flex justify-center items-center ">
+      <button
+        className="text-red-600 w-2 h-6 sm:h-8 flex justify-center items-center "
+        onClick={openModal}
+      >
         X
       </button>
     </div>
-
-    // cartItems.map((item)=>(
-    //   <div key={item.id}>
-    //     <p>item.name</p>
-
-    //   </div>
-    // ))
   );
 }
 

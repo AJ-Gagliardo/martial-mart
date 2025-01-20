@@ -19,7 +19,10 @@ function CartItems() {
   }, [cartItems]);
 
   return (
-    <div className="my-2 mx-auto max-w-screen-2xl    text-slate-800 ">
+    <div
+      className="my-2 mx-auto max-w-screen-2xl    text-slate-800 "
+      id="cartUI"
+    >
       <CartTop />
 
       {cartItems.map((product) => {

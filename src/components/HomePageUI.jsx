@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CategoryCard from "./CategoryCard";
 
 function HomePageUI() {
@@ -5,9 +6,11 @@ function HomePageUI() {
   return (
     <>
       <div className="grid grid-cols-1 place-items-center">
-        <div className="bg-red-800 text-slate-100 my-4 p-4 rounded-md font-bold w-2/3 ">
-          Check All products
-        </div>
+        <Link to="/allProducts" className="">
+          <div className="bg-red-800 text-slate-100 my-4 p-4 rounded-md font-bold w-80 ">
+            Check All products
+          </div>
+        </Link>
       </div>
       <div className="grid sm:grid-cols-4">
         <CategoryCard

@@ -12,37 +12,32 @@ function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const carouselInfiniteScroll = () => {
-    if (currentIndex === data.length - 1) {
-      return setCurrentIndex(0);
-      // console.log(currentIndex);
-    }
-    // console.log(currentIndex);
-    return setCurrentIndex(currentIndex + 1);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      carouselInfiniteScroll();
-    }, 3000);
+    const interval = setInterval(carouselInfiniteScroll, 4000);
 
-    return () => clearInterval(interval);
-  });
+    return () => clearInterval(interval); // Clean up interval on unmount
+  }, []);
 
-  //w-12/12 sm:w-12/12 this was working, i am playing around with something else
   return (
-    <div className="carousel-container w-2/2  sm:w-12/12 mx-auto flex ">
-      {data.map((item, index) => {
-        return (
+    <div className="carousel-container">
+      <div
+        className="carousel-track"
+        style={{
+          transform: `translateX(-${currentIndex * 100}%)`, // Shift the entire track
+        }}
+      >
+        {data.map((item) => (
           <img
             className="carousel-items"
-            style={{ transform: `translate(-${currentIndex * 100}%)` }}
-            key={index}
+            key={item.id}
             src={item.imgsrc}
-          >
-            {/* {item} */}
-          </img>
-        );
-      })}
+            alt={`Carousel item ${item.id}`}
+          />
+        ))}
+      </div>
     </div>
   );
 }

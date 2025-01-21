@@ -1,5 +1,6 @@
 import { useOutletContext, useParams, useSearchParams } from "react-router-dom";
 import blank from "../assets/img/Black_White_Border_Frame_Transparent_PNG_Image.png";
+import { ToastContainer, toast } from "react-toastify";
 import "./Card.css";
 import fakedb from "../fakedb.json";
 

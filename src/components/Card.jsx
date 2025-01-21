@@ -17,7 +17,7 @@ function Card({
       <img src={imgsrc} className=" w-60 h-60"></img>
       <h3 className="">${price}</h3>
       <button
-        className="mb-2 bg-slate-700"
+        className="mb-2 bg-slate-700 transition ease-in-out delay-50 active:bg-blue-500 duration-75"
         onClick={() => onAddToCart(product)}
       >
         <p className="text-slate-50">Add to Cart</p>

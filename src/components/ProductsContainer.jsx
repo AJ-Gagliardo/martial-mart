@@ -4,6 +4,8 @@ import SearchBar from "./SearchBar";
 import { useEffect, useState } from "react";
 import { Link, useOutletContext, useSearchParams } from "react-router-dom";
 import FilterUI from "./FilterUI";
+import { toast } from "react-toastify/unstyled";
+import { ToastContainer } from "react-toastify";
 
 function ProductsContainer() {
   // console.log(fakedb[0].name);
@@ -30,6 +32,38 @@ function ProductsContainer() {
 
     setSearchParams(params);
   }, [query, category, priceRange, gender]);
+
+  const [showToast, setShowToast] = useState(false);
+
+  const notify = () => {
+    // toast("This is a toast message!", {
+    //   position: "top-right",
+    //   autoClose: 3000,
+    //   hideProgressBar: false,
+    //   closeOnClick: true,
+    //   pauseOnHover: true,
+    //   draggable: true,
+    //   progress: undefined,
+    // });
+    console.log("toast!");
+
+    setShowToast(true);
+    console.log(showToast);
+    setTimeout(() => {
+      setShowToast(false);
+      console.log(showToast);
+    }, 3000);
+  };
+
+  const style = {
+    position: "fixed",
+    top: 20,
+    right: 20,
+    padding: "20px",
+    background: "#FCD12A",
+    color: "#000000",
+    borderRadius: "5px",
+  };
 
   const filteredProducts = fakedb.filter(checkQuery);
   function checkQuery(product) {
@@ -92,6 +126,7 @@ function ProductsContainer() {
       console.log(product);
       setCartItems([...cartItems, { ...product, quantity: 1 }]);
     }
+    notify();
   }
 
   // useEffect(() => {
@@ -102,6 +137,11 @@ function ProductsContainer() {
     <>
       <SearchBar query={query} setQuery={setQuery} />
 
+      {showToast && (
+        <>
+          <span style={style}>Item added to cart</span>
+        </>
+      )}
       <FilterUI
         setCategory={setCategory}
         setGender={setGender}

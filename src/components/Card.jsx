@@ -10,7 +10,7 @@ function Card({
 }) {
   //justify-center had to take it out , have to check if this will make any negative change later on
   return (
-    <div className="flex flex-col gap-2 h-82 w-70 shadow-xl rounded-md text-center justify-center place-items-center">
+    <div className="flex flex-col gap-2 h-82 w-70 shadow-xl rounded-md text-center justify-center place-items-center bg-slate-50 bg-opacity-70">
       <h2 className="h-12  sm:w-1/2 md:w-1/2 lg:w-2/2 w-50 text-ellipsis overflow-hidden whitespace-nowrap  ">
         {productName}
       </h2>

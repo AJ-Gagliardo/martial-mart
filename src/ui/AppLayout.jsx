@@ -12,7 +12,7 @@ function AppLayout() {
   const [showToast, setShowToast] = useState(false);
 
   return (
-    <div className="container mx-auto max-w-screen-lg p-0 ">
+    <div className="container mx-auto max-w-screen-lg p-0  bg">
       <Header />
       <Nav cartItems={cartItems} setCartItems={setCartItems} />
       {/* <Carousel /> */}

@@ -5,7 +5,7 @@ function HomePageUI() {
   // thinking on doing 1 card for Jiujitsu, 1 for Muay thai Shorts, 1 for Gloves,
   return (
     <>
-      <div className="grid grid-cols-1 place-items-center">
+      <div className="grid grid-cols-1 place-items-center bg-slate-50 bg-opacity-70">
         <Link to="/allProducts" className="">
           <div className="bg-red-800 text-slate-100 my-4 p-4 rounded-md font-bold w-80 ">
             Check All products

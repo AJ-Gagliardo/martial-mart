@@ -44,15 +44,15 @@ function ProductCard({
 
   if (!activeProduct) {
     return (
-      <div className="flex flex-col gap-2 h-82 w-70 shadow-xl rounded-md text-center justify-center place-items-center pb-20 my-10">
+      <div className="flex flex-col gap-2 h-82 w-70 shadow-xl rounded-md text-center justify-center place-items-center pb-20 my-10 bg-slate-50 bg-opacity-70">
         <h2 className="text-red-600">Product not found</h2>
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col gap-2 h-82 w-70 shadow-xl rounded-md text-center justify-center place-items-center my-4">
-      <h2 className="h-12  sm:w-1/2 md:w-1/2 lg:w-2/2 w-50 text-ellipsis overflow-hidden whitespace-nowrap  ">
+    <div className="flex flex-col gap-2 h-82 w-70 shadow-xl rounded-md text-center justify-center place-items-center my-4 bg-slate-50 bg-opacity-70">
+      <h2 className="h-12  sm:40 md:w-50 lg:w-50 w-50 text-ellipsis overflow-hidden whitespace-nowrap  ">
         {activeProduct.name}
       </h2>
       <img src={"/" + activeProduct.imageUrl} className=" w-60 h-60"></img>

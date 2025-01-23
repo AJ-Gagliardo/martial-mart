@@ -44,7 +44,7 @@ function ProductCard({
 
   if (!activeProduct) {
     return (
-      <div className="flex flex-col gap-2 h-82 w-70 shadow-xl rounded-md text-center justify-center place-items-center pb-20 my-10 bg-slate-50 bg-opacity-70">
+      <div className="flex flex-col gap-2 h-82 w-70 shadow-xl rounded-md text-center justify-center place-items-center pb-20 my-10 bg-slate-50 bg-opacity-70 text-slate-700">
         <h2 className="text-red-600">Product not found</h2>
       </div>
     );

@@ -52,11 +52,11 @@ function ProductCard({
 
   return (
     <div className="flex flex-col gap-2 h-82 w-70 shadow-xl rounded-md text-center justify-center place-items-center my-4 bg-slate-50 bg-opacity-70">
-      <h2 className="h-12  sm:40 md:w-50 lg:w-50 w-50 text-ellipsis overflow-hidden whitespace-nowrap  ">
+      <h2 className="h-12  sm:40 md:w-50 lg:w-50 w-50 text-ellipsis overflow-hidden whitespace-nowrap text-slate-700  ">
         {activeProduct.name}
       </h2>
       <img src={"/" + activeProduct.imageUrl} className=" w-60 h-60"></img>
-      <h3 className="">${activeProduct.price}</h3>
+      <h3 className="text-slate-700">${activeProduct.price}</h3>
       <p>{activeProduct.description}</p>
       <button
         className="mb-2 bg-slate-700"

@@ -3,6 +3,7 @@ import CartItemIndividual from "./CartItemIndividual";
 import CartTop from "./CartTop";
 import { useEffect, useState } from "react";
 
+//this component is the container for all the cart items and also all the titles and info around the /cart url, clicking on the nav 'cart' will open this
 function CartItems() {
   const { cartItems, setCartItems } = useOutletContext();
   const [totalCost, setTotalCost] = useState();

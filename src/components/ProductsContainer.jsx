@@ -7,6 +7,7 @@ import FilterUI from "./FilterUI";
 import { toast } from "react-toastify/unstyled";
 import { ToastContainer } from "react-toastify";
 
+// all products will appear here , by mapping them.
 function ProductsContainer() {
   // console.log(fakedb[0].name);
   const { cartItems, setCartItems } = useOutletContext();

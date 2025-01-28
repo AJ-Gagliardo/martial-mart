@@ -2,6 +2,7 @@ import { createContext, useContext, useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import Modal from "react-modal";
 
+// this compoennt is for each row inside the cart items when you click cart on the nav.
 function CartItemIndividual({
   productId,
   productName,

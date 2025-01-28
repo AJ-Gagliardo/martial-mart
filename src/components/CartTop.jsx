@@ -1,7 +1,8 @@
 import { createContext, useContext } from "react";
 
 function CartTop() {
-  // const { cartItems } = useContext(createContext);
+  //
+  // this is the first row of the items inside the cart, the titles that indicate what each column is
   return (
     <div className="grid grid-cols-6 col-auto gap-2 sm:gap-8 place-items-center text-sm sm:text-lg ">
       <p>Product Image</p>

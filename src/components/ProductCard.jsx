@@ -4,7 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "./Card.css";
 import fakedb from "../fakedb.json";
 
-// this will be for the individual product
+// this is for the individual product, a component to reuse and put every product on the productContainer
 
 function ProductCard({
   productName = "product",
@@ -57,7 +57,7 @@ function ProductCard({
       </h2>
       <img src={"/" + activeProduct.imageUrl} className=" w-60 h-60"></img>
       <h3 className="text-slate-700">${activeProduct.price}</h3>
-      <p>{activeProduct.description}</p>
+      <p className="text-slate-700">{activeProduct.description}</p>
       <button
         className="mb-2 bg-slate-700"
         onClick={() => addToCart(activeProduct)}

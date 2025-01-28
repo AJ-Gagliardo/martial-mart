@@ -4,6 +4,7 @@ import carouselImg1 from "../assets/img/carousel01.png";
 import carouselImg2 from "../assets/img/carousel02.png";
 
 function Carousel() {
+  // Carousel that appears on the top of the homepage
   const data = [
     { id: 1, imgsrc: carouselImg1 },
     { id: 2, imgsrc: carouselImg2 },

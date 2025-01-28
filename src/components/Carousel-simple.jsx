@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./Carousel.css";
 
 function Carousel() {
+  // this was just a test to make the real carousel later
   const data = ["1", "2", "3", "4"];
 
   const [currentIndex, setCurrentIndex] = useState(0);

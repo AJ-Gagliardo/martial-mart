@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import CategoryCard from "./CategoryCard";
 
+// this component is the Homepage, so the '/' or when clicking 'homepage' in the nav
 function HomePageUI() {
   // thinking on doing 1 card for Jiujitsu, 1 for Muay thai Shorts, 1 for Gloves,
   return (

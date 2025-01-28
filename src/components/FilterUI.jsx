@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
+// this component is to filter the products from the product catalog
 function FilterUI({ setCategory, setGender, setPriceRange }) {
   const [searchParams] = useSearchParams();
   const maleUrl =

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import blank from "../assets/img/Black_White_Border_Frame_Transparent_PNG_Image.png";
 import "./Card.css";
 
+// this is the product Cards that appear on the ProductsContainer.jsx component
 function Card({
   productName = "product",
   imgsrc = "blank",
@@ -9,7 +10,6 @@ function Card({
   onAddToCart,
   product,
 }) {
-  //justify-center had to take it out , have to check if this will make any negative change later on
   return (
     <div className="flex flex-col gap-2 h-82 w-70 shadow-xl rounded-md text-center justify-center place-items-center bg-slate-50 bg-opacity-70">
       <Link

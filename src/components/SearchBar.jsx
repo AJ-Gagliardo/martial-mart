@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+// this component  lets the user search by name of the product
 function SearchBar({ query, setQuery }) {
   const [inputValue, setInputValue] = useState("");
 
